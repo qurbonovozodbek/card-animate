@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 80%;
+    margin: auto 0;
+    border-radius: 15px; 
+    border: 2px solid #353553;
+    margin-top: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
+    background: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    margin: 12px;
+    position: relative;
+}
+.card:hover{
+    border: 0px;
+    background-position: 80% 20%;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    box-shadow: rgb(157, 0, 255) 0px 20px 50px -25px;
+}
+h3 {
+    display: none;
+    margin-top: 180px;
+    margin-left: 40px;
+    color: coral;
+    animation: slide 0.8s linear;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.card:hover h3 {
+    display: block;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-80px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
